@@ -3,12 +3,12 @@ import smtplib
 import requests
 from datetime import datetime
 import time
-
+import credentials
 
 def main():
-    user = 'cryptotextupdates@gmail.com'
-    password = 'Crypt0Upd@tes'
-    destination = '4849997056@vtext.com'
+    user = credentials.login['user']
+    password = credentials.login['password']
+    destination = credentials.login['destination']
     request_link_BTC = 'https://api.coinbase.com/v2/prices/BTC-USD/buy'
     alert_price = 58300
     can_send = True
